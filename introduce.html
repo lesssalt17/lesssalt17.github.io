@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-between; /* logo靠左 其他按鈕靠右 */
+    align-items: center;           /* 垂直置中 */
+    padding: 10px 20px;              /* 左右與頁框的距離 */
+    background-color: rgba(255, 255, 255, 0.90);    /* 0.9是透明度 */  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 陰影 */
+    height: 55px;
+    box-sizing: border-box;
+    position: fixed;      /* 固定位置 */
+    top: 0;               /* 上方距離為0 */
+    left: 0;              /* 左邊距離為0 */
+    width: 100%;          
+    z-index: 1000;        /* 固定header */
+}
+/* logo按鈕 */
+.logo a {
+    background-color: #0099d8;    
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;   /* 圓角 */
+    text-decoration: none;  /* 去掉超連結下面的線 */
+    font-weight: bold;      /* 加粗 */
+    display: inline-flex;  
+    align-items: center;   /* 對齊 */
+    gap: 8px;
+}
+/* 調整圖案的大小 */
+.home-icon {
+    width: 15px;  
+    height: auto;   /* 等比例 */
+}
+
+/* 右邊按鈕 */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    color: #0099d8;              
+    border: 1.5px solid #0099d8;    /* 邊框 */
+    padding: 6px 18px;
+    border-radius: 20px;           /* 圓角 */
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s; 
+}
+
+/* 滑鼠特效 */
+.nav-item:hover {
+    background-color: #0099d8;
+    color: white;
+}
+main {
+    display: flex;
+    flex-direction: row;   /* 橫向 */
+    align-items: flex-start;  /* 靠右 */
+    justify-content: flex-end; /* 從右邊排 */
+    color: white;
+    font-size: 30px;
+    font-family: serif;
+    text-align: center;     /* 置中 */
+    width: 1280px;
+    height: 600px;
+    gap: 50px;
+    padding-top: 135px;     /* 上方距離 */
+    padding-right: 250px;      /* 右邊距離 */
+    margin: 60px auto 10px;
+    box-sizing: border-box;
+    background-image: url(image/introduce.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    text-align: center;     
+}
+.home h1 {
+    font-size: 65px;
+    color: white;         
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+.home p {
+    font-size: 20px;
+    color: white;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+.img {
+    width: 100%;
+ }
+.card {
+    width: 800px;
+    height: 450px;
+    background-color:white;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+.card-content {
+    padding: 0px 14px 10px 14px;
+    display: flex;
+    flex-direction: column;   
+    flex-grow: 1;             
+    text-align: center;
+    justify-content: center;
+    color: #003366;;
+}
+.card-content h3,p {
+    margin: 0;
+}
+.card-content h3 {
+    margin:  0;
+    font-size: 40px;
+    text-align: center;
+}
+.card-content p {
+    margin: 0;
+    font-size: 25px;
+    text-align: center;
+}
+section {
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    margin-bottom: 38px;
+}
+.bg{
+    background-color: black;
+}
+</style>
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html" class="home-btn">
+            <img src="image/logo.png"alt="icon"class="home-icon">Home
+        </a>
+    </div>
+      
+    <nav class="nav-links">
+        <a href="album.html" class="nav-item">album</a>
+        <a href="introduce.html" class="nav-item">introduce</a>
+        <a href="https://www.bin-music.com.tw/artist/MAYDAY" class="nav-item">official</a>
+    </nav>
+</header>
+<div class="bg">
+<main>
+    <div class="home">
+        <h1>MAYDAY</h1>
+        <p>也許我們這一生</p>
+        <p>不會遇到什麼萬世悲鳴的驚濤駭浪</p>
+        <p>但每個人都能活得勇敢而飽滿</p>
+        <p>留下一張一張寫滿回憶精彩的照片</p>
+    </div>    
+</main>
+<!-- monster -->
+<section>
+    <div class="card">
+    <img class="card-image" src="image/monster.jpg" alt="image1">
+    <div class="card-content">
+    <h3 class="card-title">怪獸-團長</h3>
+    <p class="card-intro">吉他手<br>受日本樂團B'z松本孝弘的啟發<br>屬於日本搖滾風<br>身兼作曲家與編曲家<br>作品：〈九號球〉、〈天使〉等
+    </p>
+    </div>
+    </div>
+</section>
+
+<!-- ming -->
+<section>
+    <div class="card">
+    <img class="card-image" src="image/ming.jpg" alt="image1">
+    <div class="card-content">
+    <h3 class="card-title">冠佑</h3>
+    <p class="card-intro">鼓手<br>1999年加入五月天<br>於休團期至洛杉磯精進打擊樂<br>因穩定與可靠的節奏<br>被譽為五月天定海神針
+    </p>
+    </div>
+    </div>
+</section>
+
+<!-- asing -->
+<section>
+    <div class="card">
+    <img class="card-image" src="image/ashin.jpg" alt="image1">
+    <div class="card-content">
+    <h3 class="card-title">阿信</h3>
+    <p class="card-intro">主唱<br>詞曲創作、音樂製作人<br>擅長將青春、夢想<br>及人生感悟相結合<br>作品：〈燕尾蝶〉、〈倔強〉<br>〈我心中尚未崩壞的地方〉等
+    </p>
+    </div>
+    </div>
+</section>
+
+<!-- stone -->
+<section>
+    <div class="card">
+    <img class="card-image" src="image/stone.jpg" alt="image1">
+    <div class="card-content">
+    <h3 class="card-title">石頭</h3>
+    <p class="card-intro">吉他手<br>於休團期至英國進修-屬於英國搖滾<br>著有個人散文集-〈因為留不住〉<br>紀錄五月天巡演中的細微瞬間<br>與體悟
+    </p>
+    </div>
+    </div>
+</section>
+
+<!-- masa -->
+<section>
+    <div class="card">
+    <img class="card-image" src="image/masa.jpg" alt="image1">
+    <div class="card-content">
+    <h3 class="card-title">瑪莎</h3>
+    <p class="card-intro">貝斯手<br>詞曲作家、編曲家、音樂製作人<br>善於從生活觀察中提煉意象<br>將抽象情感具體化<br>作品：〈最重要的小事〉、<br>〈諾亞方舟〉等
+    </p>
+    </div>
+    </div>
+</section>
+
+<p><br></p>
+</div>
+</body>
+</html>

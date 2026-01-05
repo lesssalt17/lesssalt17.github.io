@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-between; /* logo靠左 其他按鈕靠右 */
+    align-items: center;           /* 垂直置中 */
+    padding: 10px 20px;              /* 左右與頁框的距離 */
+    background-color: rgba(255, 255, 255, 0.90);    /* 0.9是透明度 */  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 陰影 */
+    height: 55px;
+    box-sizing: border-box;
+    position: fixed;      /* 固定位置 */
+    top: 0;               /* 上方距離為0 */
+    left: 0;              /* 左邊距離為0 */
+    width: 100%;          
+    z-index: 1000;        /* 固定header */
+}
+/* logo按鈕 */
+.logo a {
+    background-color: #0099d8;    
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;   /* 圓角 */
+    text-decoration: none;  /* 去掉超連結下面的線 */
+    font-weight: bold;      /* 加粗 */
+    display: inline-flex;  
+    align-items: center;   /* 對齊 */
+    gap: 8px;
+}
+/* 調整圖案的大小 */
+.home-icon {
+    width: 15px;  
+    height: auto;   /* 等比例 */
+}
+
+/* 右邊按鈕 */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    color: #0099d8;              
+    border: 1.5px solid #0099d8;    /* 邊框 */
+    padding: 6px 18px;
+    border-radius: 20px;           /* 圓角 */
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s; 
+}
+
+/* 滑鼠特效 */
+.nav-item:hover {
+    background-color: #0099d8;
+    color: white;
+}
+main {
+    display: flex;
+    flex-direction: row;   /* 橫向 */
+    align-items: flex-start;  /* 靠左 */
+    justify-content: flex-start; /* 靠左 */
+    color: #003366;
+    font-size: 30px;
+    font-family: serif;
+    text-align: center;
+    width: 1280px;
+    height: 777px;
+    gap: 50px;
+    padding-top: 150px;
+    padding-left: 150px;
+    margin: 60px auto 10px;
+    box-sizing: border-box;
+    background-image: url(image/home-background.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    text-align: center;  
+}
+.home h1 {
+    font-size: 65px;
+    color: #003366;           
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+.home p {
+    font-size: 20px;
+    color: #003366;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+.bg{
+    background-color: black;
+}
+</style>
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html" class="home-btn">
+            <img src="image/logo.png"alt="icon"class="home-icon">Home
+        </a>
+    </div>
+      
+    <nav class="nav-links">
+        <a href="album.html" class="nav-item">album</a>
+        <a href="introduce.html" class="nav-item">introduce</a>
+        <a href="https://www.bin-music.com.tw/artist/MAYDAY" class="nav-item">official</a>
+    </nav>
+</header>
+<div class="bg">
+<main>
+    <div class="home">
+        <h1>MAYDAY</h1>
+        <p>少了你們 我們就不是五月天</p>
+        <p>因為有你們 我們才是五月天</p>
+        <p>加入五月天 永遠不會太遲</p>
+    </div>    
+</main>
+<p><br></p>
+</div>
+</body>
+</html>

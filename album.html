@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+.navbar {
+    display: flex;
+    justify-content: space-between; /* logo靠左 其他按鈕靠右 */
+    align-items: center;           /* 垂直置中 */
+    padding: 10px 20px;              /* 左右與頁框的距離 */
+    background-color: rgba(255, 255, 255, 0.90);    /* 0.9是透明度 */  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 陰影 */
+    height: 55px;
+    box-sizing: border-box;
+    position: fixed;      /* 固定位置 */
+    top: 0;               /* 上方距離為0 */
+    left: 0;              /* 左邊距離為0 */
+    width: 100%;          
+    z-index: 1000;        /* 固定header */
+}
+/* logo按鈕 */
+.logo a {
+    background-color: #0099d8;    
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;   /* 圓角 */
+    text-decoration: none;  /* 去掉超連結下面的線 */
+    font-weight: bold;      /* 加粗 */
+    display: inline-flex;  
+    align-items: center;   /* 對齊 */
+    gap: 8px;
+}
+/* 調整圖案的大小 */
+.home-icon {
+    width: 15px;  
+    height: auto;   /* 等比例 */
+}
+
+/* 右邊按鈕 */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    color: #0099d8;              
+    border: 1.5px solid #0099d8;    /* 邊框 */
+    padding: 6px 18px;
+    border-radius: 20px;           /* 圓角 */
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s; 
+}
+
+/* 滑鼠特效 */
+.nav-item:hover {
+    background-color: #0099d8;
+    color: white;
+}
+main {
+    display: flex;
+    flex-direction: row;   /* 橫向 */
+    align-items: flex-start;  /* 靠右 */
+    justify-content: flex-end; /* 從右邊開始 */
+    color: white;
+    font-size: 30px;
+    font-family: serif;
+    text-align: center;
+    width: 1280px;
+    height: 600px;
+    gap: 50px;
+    padding-top: 135px;
+    padding-right: 200px;
+    margin: 60px auto 10px;
+    box-sizing: border-box;
+    background-image: url(image/album.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    text-align: center;      
+}
+.home h1 {
+    font-size: 65px;
+    color: white;          
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+.home p {
+    font-size: 20px;
+    color: white;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+.img {
+    width: 100%;
+ }
+.card {
+    width: 272px;
+    height: 505px;
+    background-color:white;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card-content {
+    padding: 0px 14px 10px 14px;
+    display: flex;
+    flex-direction: column;    
+    flex-grow: 1;              
+}
+.card-content h3,p {
+    margin: 0;
+}
+.card-content h3 {
+    margin:  0;
+    font-size: 22px;
+    text-align: center;
+    color: #005EBB;
+}
+.card-content p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    color: #33689E;
+}
+
+section {
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    margin-bottom: 38px;
+}
+.card-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;               
+    margin-top: auto; 
+    padding-bottom: 0px;
+}
+.card-btn{
+    color: #00305f;               
+    border: 1.5px solid #00305f;   
+    background-color: white;      
+    border-radius: 20px;           
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;       
+    width: 252px;                 
+    height: 36px;                
+    
+    /* 垂直置中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.card-btn:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+.card0{
+    width: 272px;
+    height: 505px;
+    background-color:transparent;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.bg{
+    background-color: black;
+}
+</style>
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html" class="home-btn">
+            <img src="image/logo.png"alt="icon"class="home-icon">Home
+        </a>
+    </div>
+      
+    <nav class="nav-links">
+        <a href="album.html" class="nav-item">album</a>
+        <a href="introduce.html" class="nav-item">introduce</a>
+        <a href="https://www.bin-music.com.tw/artist/MAYDAY" class="nav-item">official</a>
+    </nav>
+</header>
+<div class="bg">
+<main>
+    <div class="home">
+        <h1>MAYDAY</h1>
+        <p>也許我們這一生</p>
+        <p>不會遇到什麼萬世悲鳴的驚濤駭浪</p>
+        <p>但每個人都能活得勇敢而飽滿</p>
+        <p>留下一張一張寫滿回憶精彩的照片</p>
+    </div>    
+</main>
+
+<!-- list1 -->
+<section>
+
+    <!-- card1 -->
+    <div class="card">
+    <img class="card-image" src="image/image1.jpg" alt="image1">
+    <div class="card-content">
+    <h3 class="card-title">五月天第一張創作專輯</h3>
+    <p class="card-intro">1999年<br>懷抱對披頭四的景仰感召，以創作唱出自己的堅持。<br>「生活」<br>喜怒哀樂 苦辣酸甜 終於了解<br>這就是生活的滋味 <br>夢的邊緣 我在徘徊 終於了解<br>這就是生活的滋味
+    </p>
+    <div class="card-btns">
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_mu7jwhIlw0LqMFZ_ip2806IQ8WHR2I-XM" class="card-btn">Go to the album</a>
+        <a href="https://www.youtube.com/watch?v=MnHzlzm2SNs" class="card-btn">Listen to this song</a>
+    </div>
+    </div>
+    </div>
+
+    <!-- card2 -->
+    <div class="card">
+    <img class="card-image" src="image/image2.jpg" alt="">
+    <div class="card-content">
+    <h3 class="card-title">愛情萬歲</h3>
+    <p class="card-intro">2000年<br>探討愛情的面向，卻沒有任何歌頌愛情的歌曲。<br>「心中無別人」<br>是你給阮一個夢 未記人生的苦澀 <br>真正想要對你講 甘擱有別項 <br>是你放阮一個人 走過風雨的思念<br> 真正想要對你講 心中無別人
+    </p>
+    <div class="card-btns">
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_l7yTz42xLfiIWAq4AXyO8jB198Ndrmt_c" class="card-btn">Go to the album</a>
+        <a href="https://www.youtube.com/watch?v=EitgfC3gg7M" class="card-btn">Listen to this song</a>
+    </div>
+    </div>
+    </div>
+
+    <!-- card3 -->
+    <div class="card">
+    <img class="card-image" src="image/image3.jpg" alt="">
+    <div class="card-content">
+    <h3 class="card-title">人生海海</h3>
+    <p class="card-intro">2001年<br>褪去屬於少年的狂放與莽撞，轉而注入更多對生命無常的深沉思考、惆悵與最終的豁達。<br>「純真」<br>你心中一定有座濃霧的湖泊<br>任憑月光再皎潔照也照不透
+    </p>
+    <div class="card-btns">
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_lEJWAdAsUlciDg-M2E74l-5eCjQ-60co0" class="card-btn">Go to the album</a>
+        <a href="https://www.youtube.com/watch?v=n3FakylRnR0" class="card-btn">Listen to this song</a>
+    </div>
+    </div>
+    </div>
+
+    <!-- card4 -->
+    <div class="card">
+    <img class="card-image" src="image/image4.jpg" alt="">
+    <div class="card-content">
+    <h3 class="card-title">時光機</h3>
+    <p class="card-intro">2003年<br>經歷了不同的人生階段後，對時間流逝和心境轉變的感悟。<br>「武裝」<br>最後我開始武裝自己<br>有名字 沒有個性<br>最後我開始武裝自己<br>我活著 用我的邏輯
+    </p>
+    <div class="card-btns">
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_ldnF02p8W3ToEHhVselCpTyp0B7A1fXA0" class="card-btn">Go to the album</a>
+        <a href="https://www.youtube.com/watch?v=5fcItjQFG3I" class="card-btn">Listen to this song</a>
+    </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- list2 -->
+<section>
+    <!-- card5 -->
+    <div class="card">
+    <img class="card-image" src="image/image1.jpg" alt="image1">
+    <div class="card-content">
+    <h3 class="card-title">神的孩子都在跳舞</h3>
+    <p class="card-intro">2004年<br>名稱來自小說家「村上春樹」的同名小說，利用了大量的人物表達對於現實、愛情種種的一切。<br>「倔強」<br>你 不在乎我的過往<br>看到了我的翅膀<br>你說被火燒過 才能出現鳳凰
+    </p>
+    <div class="card-btns">
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_n9O6JMh-_XL4Hru5snUbpfq706fo2TJ40" class="card-btn">Go to the album</a>
+        <a href="https://www.youtube.com/watch?v=R2s-H_crYkc" class="card-btn">Listen to this song</a>
+    </div>
+    </div>
+    </div>
+    <!-- card6 -->
+    <div class="card">
+    <img class="card-image" src="image/image2.jpg" alt="">
+    <div class="card-content">
+    <h3 class="card-title">為愛而生</h3>
+    <p class="card-intro">2006年<br>成立相信音樂後發行的第一張專輯。以「愛」為中心，探討愛的各種面向。<br>「最重要的小事」<br>世界紛紛擾擾喧喧鬧鬧 什麼是真實<br>就算庸庸碌碌匆匆忙忙 活過一輩子
+    </p>
+    <div class="card-btns">
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_kb1CIiHCTCOJVRiPw_yZRhuuVupe1jypA" class="card-btn">Go to the album</a>
+        <a href="https://www.youtube.com/watch?v=_uhpoBx6Hpc" class="card-btn">Listen to this song</a>
+    </div>
+    </div>
+    </div>
+    <!-- card7 -->
+    <div class="card">
+    <img class="card-image" src="image/image3.jpg" alt="">
+    <div class="card-content">
+    <h3 class="card-title">後青春期的詩</h3>
+    <p class="card-intro">2008年<br>探討青春消逝後的生命狀態、回憶與未來。深刻描繪了人生旅程、面對現實的勇氣。<br>「後青春期的詩」<br>期待已退化成等待 而我告別了突然<br>當淚痕勾勒成遺憾 回憶誇飾著傷感
+    </p>
+    <div class="card-btns">
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_novkek5qXJCH9OBgbguNVWr5ff1Hbi06o" class="card-btn">Go to the album</a>
+        <a href="https://www.youtube.com/watch?v=pF8xLl305q4" class="card-btn">Listen to this song</a>
+    </div>
+    </div>
+    </div>
+
+    <!-- card8 -->
+    <div class="card">
+    <img class="card-image" src="image/image4.jpg" alt="">
+    <div class="card-content">
+    <h3 class="card-title">第二人生</h3>
+    <p class="card-intro">2011年<br>以2012年是否為世界末日為概念，如果末日沒有發生，就有機會選擇你的《第二人生》<br>「有些事現在不做 一輩子都不會做了」<br>每個渺小的理由 都困住自由 有些事情還不做 你的理由 會是什麼
+    </p>
+    <div class="card-btns">
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_mOIIE7XBEU_OOm3gngoaDQ4xOgxsgcni4" class="card-btn">Go to the album</a>
+        <a href="https://www.youtube.com/watch?v=2F0m58YIMPs" class="card-btn">Listen to this song</a>
+    </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- list3 -->
+<section>
+
+    <!-- card9 -->
+    <div class="card">
+    <img class="card-image" src="image/image1.jpg" alt="image1">
+    <div class="card-content">
+    <h3 class="card-title">自傳</h3>
+    <p class="card-intro">2016年<br>記錄了從團體成立至今的心路歷程與成長，並涵蓋了五月天與歌迷的共同回憶。<br>「轉眼」<br>這是我自傳 最終章 寫這首長詩 用一生時光 我不怕死亡 只害怕遺忘 回憶是你我 生存的地方
+    </p>
+    <div class="card-btns">
+        <a href="https://music.youtube.com/playlist?list=OLAK5uy_mESOb1ESrtiknd_yWObfBGrQ7re_7jx3s" class="card-btn">Go to the album</a>
+        <a href="https://www.youtube.com/watch?v=GuqY5OViunk" class="card-btn">Listen to this song</a>
+    </div>
+    </div>
+    </div>
+
+    <!-- card0 -->
+    <div class="card0">
+    <img class="card-image" src="" alt="">
+    <div class="card-content">
+    <h3 class="card-title"></h3>
+    <p class="card-intro">
+    </p>
+    </div>
+    </div>
+
+    <!-- card0 -->
+    <div class="card0">
+    <img class="card-image" src="" alt="">
+    <div class="card-content">
+    <h3 class="card-title"></h3>
+    <p class="card-intro">
+    </div>
+    </div>
+
+    <!-- card0 -->
+    <div class="card0">
+    <img class="card-image" src="" alt="">
+    <div class="card-content">
+    <h3 class="card-title"></h3>
+    <p class="card-intro">
+    </p>
+    </div>
+    </div>
+</section>
+<p><br></p>
+</div>
+</body>
+</html>
